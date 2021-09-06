@@ -1,6 +1,8 @@
 .header {
   position: sticky;
+  height: auto;
   top: 0;
+  background-color: grey;
   z-index: 1000;
   &.open {
     .hamburger__button {
@@ -23,7 +25,7 @@
     padding: 20px 30px;
     justify-content: space-between;
     align-items: center;
-    background-color: grey;
+
     &__logo {
       a {
         text-decoration: none;
@@ -54,28 +56,23 @@
         }
       }
     }
+    // mobile menu
   }
-}
-
-// mobile menu
-.mobile {
-  display: none;
-  position: sticky;
-  top: 66px;
-  background-color: grey;
-  border-top: 1px solid black;
-  padding: 20px 30px;
-  z-index: 1000;
-  &.expand {
-    display: block;
-  }
-  &__nav {
-    a {
+  .mobile {
+    display: none;
+    border-top: 1px solid black;
+    padding: 20px 30px;
+    &.expand {
       display: block;
-      text-decoration: none;
-      color: black;
-      &:not(:last-child) {
-        margin-bottom: 10px;
+    }
+    &__nav {
+      a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -92,11 +89,11 @@
           display: none;
         }
       }
-    }
-  }
-  .mobile {
-    &.expand {
-      display: none;
+      .mobile {
+        &.expand {
+          display: none;
+        }
+      }
     }
   }
 }
