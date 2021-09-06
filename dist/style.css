@@ -54,7 +54,7 @@ p {
   position: sticky;
   height: auto;
   top: 0;
-  background-color: grey;
+  background-color: #000000;
   z-index: 1000;
 }
 
@@ -89,7 +89,7 @@ p {
 
 .header .nav__logo a {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
 
 .header .nav__links {
@@ -98,11 +98,17 @@ p {
 
 .header .nav__links a {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 .header .nav__links a:not(:last-child) {
   margin-right: 50px;
+}
+
+.header .nav__links a:hover {
+  color: #ff38a9;
 }
 
 .header .nav .hamburger__button span {
@@ -110,7 +116,7 @@ p {
   width: 30px;
   height: 4px;
   border-radius: 5px;
-  background-color: black;
+  background-color: #ffffff;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   -webkit-transform-origin: 2px 2px;
@@ -123,7 +129,7 @@ p {
 
 .header .mobile {
   display: none;
-  border-top: 1px solid black;
+  border-top: 1px solid #ff38a9;
   padding: 20px 30px;
 }
 
@@ -134,11 +140,17 @@ p {
 .header .mobile__nav a {
   display: block;
   text-decoration: none;
-  color: black;
+  color: #ffffff;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 .header .mobile__nav a:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.header .mobile__nav a:hover {
+  color: #ff38a9;
 }
 
 @media only screen and (min-width: 920px) {
@@ -200,6 +212,13 @@ p {
 }
 
 .crew__cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 30px;
   padding: 0 30px;
 }
@@ -225,22 +244,38 @@ p {
 }
 
 .back a {
+  position: relative;
   text-decoration: none;
-  color: black;
+  color: #000000;
+}
+
+.back a i {
+  color: #ff38a9;
+}
+
+.back a::before {
+  content: "";
+  position: absolute;
+  top: 27px;
+  background-color: #ff38a9;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
 }
 
 .footer {
-  background-color: grey;
+  background-color: #000000;
 }
 
 .footer__logo {
   padding: 20px 30px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ff38a9;
+  color: #ffffff;
 }
 
 .footer__logo a {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
 
 .footer .container {
@@ -249,23 +284,29 @@ p {
   display: flex;
   width: 100%;
   height: auto;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ff38a9;
 }
 
 .footer .container .footer__sitemap {
   width: 50%;
   padding: 20px 20px 20px 30px;
-  border-right: 1px solid black;
+  border-right: 1px solid #ff38a9;
 }
 
 .footer .container .footer__sitemap a {
   display: block;
   text-decoration: none;
-  color: black;
+  color: #ffffff;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 .footer .container .footer__sitemap a:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.footer .container .footer__sitemap a:hover {
+  color: #ff38a9;
 }
 
 .footer .container .footer__connect {
@@ -276,16 +317,23 @@ p {
 .footer .container .footer__connect a {
   display: block;
   text-decoration: none;
-  color: black;
+  color: #ffffff;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 .footer .container .footer__connect a:not(:last-child) {
   margin-bottom: 10px;
 }
 
+.footer .container .footer__connect a:hover {
+  color: #ff38a9;
+}
+
 .footer__copy {
   padding: 5px 30px;
   text-align: center;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 1200px) {

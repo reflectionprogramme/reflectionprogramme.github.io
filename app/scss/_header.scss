@@ -2,7 +2,7 @@
   position: sticky;
   height: auto;
   top: 0;
-  background-color: grey;
+  background-color: $black;
   z-index: 1000;
   &.open {
     .hamburger__button {
@@ -29,16 +29,20 @@
     &__logo {
       a {
         text-decoration: none;
-        color: black;
+        color: $white;
       }
     }
     &__links {
       display: none;
       a {
         text-decoration: none;
-        color: black;
+        color: $white;
+        transition: color 300ms ease-in-out;
         &:not(:last-child) {
           margin-right: 50px;
+        }
+        &:hover {
+          color: $pink;
         }
       }
     }
@@ -48,7 +52,7 @@
         width: 30px;
         height: 4px;
         border-radius: 5px;
-        background-color: black;
+        background-color: $white;
         transition: all 300ms ease-in-out;
         transform-origin: 2px 2px;
         &:not(:last-child) {
@@ -60,7 +64,7 @@
   }
   .mobile {
     display: none;
-    border-top: 1px solid black;
+    border-top: 1px solid $pink;
     padding: 20px 30px;
     &.expand {
       display: block;
@@ -69,9 +73,13 @@
       a {
         display: block;
         text-decoration: none;
-        color: black;
+        color: $white;
+        transition: color 300ms ease-in-out;
         &:not(:last-child) {
           margin-bottom: 10px;
+        }
+        &:hover {
+          color: $pink;
         }
       }
     }
