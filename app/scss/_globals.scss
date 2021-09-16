@@ -1,6 +1,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -47,6 +48,32 @@ a {
     margin-top: 1.875rem;
   }
   &-xl {
-    margin-top: 2.5rem;
+    margin-top: 3.75rem;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.width-50 {
+  width: 50%;
+  &.m-right {
+    margin-right: 30px;
+  }
+}
+
+// Visibility
+.hide-for-mobile {
+  // hide for tablet and mobile
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  // hide for desktop viewport widths
+  @include breakpoint-up(large) {
+    display: none;
   }
 }

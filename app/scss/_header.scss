@@ -1,39 +1,37 @@
-.header {
+header {
   position: sticky;
-  height: auto;
   top: 0;
-  background-color: $black;
+  background-color: black;
   z-index: 1000;
-  &.open {
-    .hamburger__button {
-      > span:first-child {
-        transform: rotate(45deg);
-      }
-      > span:nth-child(2) {
-        opacity: 0;
-      }
-      > span:last-child {
-        transform: rotate(-45deg);
-      }
-    }
-  }
-
   .nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: auto;
     padding: 1.25rem 1.875rem;
-    justify-content: space-between;
-    align-items: center;
-
-    &__logo {
-      a {
-        text-decoration: none;
-        color: $white;
+    &.open {
+      .nav__hamburger {
+        > span:first-child {
+          transform: rotate(-45deg) translate(-7px, 6px);
+        }
+        > span:nth-child(2) {
+          opacity: 0;
+        }
+        > span:last-child {
+          transform: rotate(45deg) translate(-6px, -6px);
+        }
       }
     }
-    &__links {
-      display: none;
+    &__logo {
+      a {
+        img {
+          width: 4.375rem;
+          height: auto;
+        }
+      }
+    }
+    &__desktop {
       a {
         text-decoration: none;
         color: $white;
@@ -46,60 +44,38 @@
         }
       }
     }
-    .hamburger__button {
+    &__hamburger {
       span {
         display: block;
         width: 1.875rem;
         height: 0.25rem;
-        border-radius: 0.3125rem;
         background-color: $white;
+        border-radius: 0.25rem;
         transition: all 300ms ease-in-out;
-        transform-origin: 2px 3px;
         &:not(:last-child) {
           margin-bottom: 0.3125rem;
         }
       }
     }
-    // mobile menu
   }
   .mobile {
-    display: none;
-    border-top: 0.0625rem solid $pink;
+    border-top: 1px solid $pink;
     padding: 1.25rem 1.875rem;
-    &.expand {
-      display: block;
-    }
-    &__nav {
-      a {
-        display: block;
-        text-decoration: none;
-        color: $white;
-        transition: color 300ms ease-in-out;
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        list-style-type: none;
         &:not(:last-child) {
           margin-bottom: 0.625rem;
         }
-        &:hover {
-          color: $pink;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and(min-width:920px) {
-  body {
-    .header {
-      .nav {
-        &__links {
-          display: block;
-        }
-        .hamburger__button {
-          display: none;
-        }
-      }
-      .mobile {
-        &.expand {
-          display: none;
+        a {
+          text-decoration: none;
+          color: $white;
+          transition: color 300ms ease-in-out;
+          &:hover {
+            color: $pink;
+          }
         }
       }
     }

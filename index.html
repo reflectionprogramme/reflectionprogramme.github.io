@@ -29,155 +29,181 @@
       crossorigin="anonymous"
     />
 
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- custom css -->
     <link rel="stylesheet" href="dist/style.css" />
+
+    <!-- Web title -->
     <title>RFLCTN</title>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="shortcut icon" href="images/favicon.PNG" type="image/png" />
   </head>
   <body>
-    <!-- header -->
-    <header id="header" class="header">
+    <header>
       <nav class="nav">
+        <!-- Nav logo -->
         <div class="nav__logo">
-          <a href="#">Logo</a>
+          <a href="#"><img src="images/logo-rflctn-01.png" alt="logo" /></a>
         </div>
 
-        <!-- desktop nav -->
-        <div class="nav__links">
-          <a href="#film">Trailer</a><a href="#crew">Crews</a
+        <!-- desktop menu -->
+        <div class="nav__desktop hide-for-mobile">
+          <a href="#film">Trailer</a><a href="#credits">Credits</a
           ><a href="#about">About Us</a>
         </div>
 
-        <!-- Hamburger menu for mobile -->
-        <a class="hamburger__button" href="#">
+        <!-- hamburger button for mobile navigation -->
+        <div class="nav__hamburger hide-for-desktop">
           <span></span><span></span><span></span>
-        </a>
+        </div>
       </nav>
 
-      <!-- mobile menu -->
-      <div class="mobile">
-        <div class="mobile__nav">
-          <a href="#film">Trailer</a><a href="#crew">Crews</a
-          ><a href="#about">About Us</a>
-        </div>
+      <!-- Mobile navigation -->
+      <div class="mobile hide-for-desktop" style="display: none">
+        <ul>
+          <li><a href="#film">Trailer</a></li>
+          <li><a href="#credits">Credits</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
       </div>
     </header>
 
     <!-- hero -->
-    <section class="hero mt-lg">
-      <h2>Some Hero Heading</h2>
-      <h3>Some hero body</h3>
-    </section>
+    <div data-aos="fade-in" data-aos-duration="1500">
+      <div class="hero">
+        <div class="hero__text">
+          <h2>Some Hero Heading</h2>
+          <h3>Some hero body</h3>
+        </div>
+      </div>
+    </div>
 
     <!-- Film description -->
-    <section id="film" class="film mt-lg">
-      <div class="film__desc">
-        <h1>Film Title</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-          neque quas nobis debitis nihil incidunt, dolorum totam in non,
-          praesentium aliquid velit consectetur quidem esse asperiores
-          reprehenderit dolorem quam voluptates?
-        </p>
-      </div>
+    <div id="film"></div>
+    <section class="film mt-xl">
+      <div data-aos="fade-in" data-aos-duration="1500">
+        <div class="film__desc">
+          <h1>Memoria</h1>
+          <p>
+            Memoria tells of a flashback in the memory journey between two
+            people who are unlikely to be reunited. The journey begins when the
+            voice of a woman who identifies herself as &#39;I&#39; appears and
+            inquires about &#39;you&#39;, who she cannot see, over an old
+            payphone, followed by a journey through the past disguised in a
+            joint coin search mission. Something finally realized by the figure
+            of &#39;I&#39;, that everything that has happened will not come back
+            even if she waits for a long time and that &#39;I&#39; and
+            &#39;You&#39; will not be destined to be &#39;Us&#39;.
+          </p>
+        </div>
 
-      <div class="container">
-        <div class="film__trailer mt-md">
-          <iframe
-            class="trailer__video"
-            src="https://www.youtube.com/embed/KSzQlwOfTk8"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <div class="container mt-xl">
+          <div class="film__trailer mt-md">
+            <iframe
+              class="trailer__video"
+              src="https://www.youtube.com/embed/jAT_fludXas"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- crews -->
-    <section id="crew" class="crew mt-lg">
-      <h1>Crews</h1>
-      <div class="crew__cards">
-        <div class="card">
-          <h3>Crew Role</h3>
-          <div class="card__image">
-            <img src="images/blank-profile.png" alt="" />
+    <!-- Crew and cast or talent -->
+    <div id="credits"></div>
+    <div data-aos="fade-in" data-aos-duration="1500">
+      <section class="credits mt-xl">
+        <div class="credits__cast">
+          <h2>Cast</h2>
+          <div class="vo flex">
+            <p class="width-50 m-right"><strong>Voice Over</strong></p>
+            <p class="width-50">Nandhita Dhanesvari</p>
           </div>
-          <h4>Crew Name</h4>
         </div>
-        <div class="card">
-          <h3>Crew Role</h3>
-          <div class="card__image">
-            <img src="images/blank-profile.png" alt="" />
+
+        <div class="credits__crew">
+          <h2>Crew</h2>
+          <div class="producer flex">
+            <p class="width-50 m-right"><strong>Producer</strong></p>
+            <p class="width-50">Yanuar Banu Herastanto</p>
           </div>
-          <h4>Crew Name</h4>
-        </div>
-        <div class="card">
-          <h3>Crew Role</h3>
-          <div class="card__image">
-            <img src="images/blank-profile.png" alt="" />
+          <div class="director flex">
+            <p class="width-50 m-right"><strong>Director</strong></p>
+            <p class="width-50">Akhmad Mufti</p>
           </div>
-          <h4>Crew Name</h4>
-        </div>
-        <div class="card">
-          <h3>Crew Role</h3>
-          <div class="card__image">
-            <img src="images/blank-profile.png" alt="" />
+          <div class="script-writer flex">
+            <p class="width-50 m-right"><strong>Script Writer</strong></p>
+            <p class="width-50">Akhmad Mufti</p>
           </div>
-          <h4>Crew Name</h4>
-        </div>
-        <div class="card">
-          <h3>Crew Role</h3>
-          <div class="card__image">
-            <img src="images/blank-profile.png" alt="" />
+          <div class="dop flex">
+            <p class="width-50 m-right">
+              <strong>Director of Photography</strong>
+            </p>
+            <p class="width-50">Ihsan Kurniawan</p>
           </div>
-          <h4>Crew Name</h4>
-        </div>
-        <div class="card">
-          <h3>Crew Role</h3>
-          <div class="card__image">
-            <img src="images/blank-profile.png" alt="" />
+          <div class="editor flex">
+            <p class="width-50 m-right"><strong>Editor</strong></p>
+            <div class="width-50">
+              <p>Akhmad Mufti</p>
+              <p>Ihsan Kurniawan</p>
+            </div>
           </div>
-          <h4>Crew Name</h4>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- about us -->
-    <section id="about" class="about">
-      <h1>About Us</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-        dolor blanditiis et perferendis asperiores adipisci, quasi modi
-        excepturi cupiditate! Ipsum repudiandae consequuntur eos! Nihil quidem
-        corporis autem velit saepe aliquam!
-      </p>
+    <div id="about"></div>
+    <section class="about mt-xl">
+      <div data-aos="fade-in" data-aos-duration="1500">
+        <h1>About Us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+          dolor blanditiis et perferendis asperiores adipisci, quasi modi
+          excepturi cupiditate! Ipsum repudiandae consequuntur eos! Nihil quidem
+          corporis autem velit saepe aliquam!
+        </p>
+      </div>
     </section>
 
     <!-- back to top -->
-    <div class="back mt-lg">
-      <a href="#"><i class="fas fa-arrow-up"></i> Back to top</a>
+    <div class="back mt-xl">
+      <div data-aos="fade-in" data-aos-duration="1500">
+        <a href="#"><i class="fas fa-arrow-up"></i> Back to top</a>
+      </div>
     </div>
 
     <!-- footer -->
-    <footer class="footer mt-lg">
+    <footer class="footer mt-xl">
       <div class="footer__logo">
-        <a href="#">Logo</a>
+        <a href="#"><img src="images/logo-rflctn-01.png" alt="logo" /></a>
         <p>Some slogan or motto goes here</p>
       </div>
 
       <div class="container">
         <div class="footer__sitemap">
-          <a href="#film">Trailer</a><a href="#crew">Crews</a
+          <a href="#film">Trailer</a><a href="#credits">Credits</a
           ><a href="#about">About Us</a>
         </div>
         <div class="footer__connect">
           <a href="https://www.instagram.com/reflection.ss/" target="_blank"
             ><i class="fab fa-instagram"></i> Instagram</a
           >
-          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-          <a href="#"><i class="fab fa-youtube"></i> Youtube</a>
+          <!-- <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#"><i class="fab fa-twitter"></i> Twitter</a> -->
+          <a
+            href="https://www.youtube.com/channel/UClxBkkAP_5iytVD0gTB2CHA"
+            target="_blank"
+            ><i class="fab fa-youtube"></i> Youtube</a
+          >
         </div>
       </div>
 
@@ -187,5 +213,11 @@
     </footer>
 
     <script src="app/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
   </body>
 </html>
