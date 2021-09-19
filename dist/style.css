@@ -94,7 +94,7 @@ header .nav {
 }
 
 header .nav.open .nav__hamburger > span:first-child {
-  transform: rotate(-45deg) translate(-7px, 6px);
+  transform: rotate(-45deg) translate(-8px, 7px);
 }
 
 header .nav.open .nav__hamburger > span:nth-child(2) {
@@ -102,7 +102,7 @@ header .nav.open .nav__hamburger > span:nth-child(2) {
 }
 
 header .nav.open .nav__hamburger > span:last-child {
-  transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 header .nav__logo a img {
