@@ -102,6 +102,10 @@ a {
   border-radius: 0.25rem;
 }
 
+.movie {
+  margin-bottom: 3.75rem;
+}
+
 .movie .container {
   padding: 0 15.625rem;
 }
